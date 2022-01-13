@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security-3.1.xsd
+        http://www.springframework.org/schema/jee
+        http://www.springframework.org/schema/jee/spring-jee-4.2.xsd
+        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+	<context:annotation-config />
+	<mvc:annotation-driven />
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<context:component-scan base-package="com.tekskills" />
+	<tx:annotation-driven />
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/Pages/" />
+		<property name="suffix" value=".jsp" />
+		<property name="order" value="1" />
+	</bean>
+	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.tiles3.TilesView" />
+		<property name="order" value="0" />
+	</bean>
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	 <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+	<property name="basename">
+			<value>/WEB-INF/mail.properties</value>
+		</property>
+   
+</bean> 
+	
+	
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>/WEB-INF/database.properties</value>
+		</property>
+	</bean>
+	
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${db.driverClassName}" />
+        <property name="url" value="${db.databaseUrl}" />
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
+    </bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		
+		<property name="packagesToScan">
+			<list>
+				<value>com.tekskills.Entity</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${db.dialect}</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.generate_statistics">false</prop>
+				<!--   <prop key="hibernate.hbm2ddl.auto">update</prop> -->  
+			</props>
+		</property>
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="multipartResolver" 
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="20000000"  />
+	</bean>
+	
+
+
+<!-- HPCL Connection -->
+
+<bean id="hpcldataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${hpcldb.driverClassName}" />
+        <property name="url" value="${hpcldb.databaseUrl}" />
+        <property name="username" value="${hpcldb.username}"/>
+        <property name="password" value="${hpcldb.password}"/>
+    </bean>
+
+	<bean id="hpclsessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="hpcldataSource" />		
+		<property name="packagesToScan">
+			<list>
+				<value>com.tekskills.Entity</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${db.dialect}</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.generate_statistics">false</prop>
+				<!--   <prop key="hibernate.hbm2ddl.auto">update</prop> -->  
+			</props>
+		</property>
+	</bean>
+
+<bean id="hpcltransactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+    <property name="sessionFactory" ref="hpclsessionFactory"/>
+</bean>
+<tx:annotation-driven transaction-manager="hpcltransactionManager"/>
+
+
+</beans>
+
+
+	
+

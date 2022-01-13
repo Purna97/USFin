@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="base.definition" template="/common/common_layout/layout.jsp">
+		<put-attribute name="header" value="/common/header.jsp" />
+		<put-attribute name="left_bar" value="/common/leftbar.jsp" />
+		<put-attribute name="body" value=""/>
+		<put-attribute name="footer" value="" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+		 <definition name="viewdetails" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ViewAllDetails.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+	 <definition name="immidashboard" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ImmigrationDashboard.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+     
+            <definition name="invoicegen" extends="base.definition">
+              <put-attribute name="body" value="/Pages/Invoice.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+          <definition name="receivepay" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ReceivePayments.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="genreport" extends="base.definition">
+              <put-attribute name="body" value="/Pages/GenerateReports.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="userimmidashboard" extends="base.definition">
+              <put-attribute name="body" value="/Pages/UserDashboard.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="repoSearch" extends="base.definition">
+              <put-attribute name="body" value="/Pages/RepoSearch.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+	<definition name="AddEmployees" extends="base.definition">
+		<put-attribute name="body" value="/Pages/AddEmployees.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+	<definition name="EmployeeDocuments" extends="base.definition">
+		<put-attribute name="body" value="/Pages/EmployeeDocuments.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+	<definition name="AddContractors" extends="base.definition">
+		<put-attribute name="body" value="/Pages/AddContractors.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+	<definition name="AddCustomer" extends="base.definition">
+		<put-attribute name="body" value="/Pages/AddCustomer.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+	<definition name="AddVendor" extends="base.definition">
+		<put-attribute name="body" value="/Pages/AddVendor.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+	<definition name="AddClientVendor" extends="base.definition">
+		<put-attribute name="body" value="/Pages/AddClientVendor.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+	<definition name="EditClientVendor" extends="base.definition">
+		<put-attribute name="body" value="/Pages/EditClientVendor.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+	<definition name="EditW2ClientVendor" extends="base.definition">
+		<put-attribute name="body" value="/Pages/EditW2ClientVendor.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+	<definition name="AddEmpBankDetails" extends="base.definition">
+		<put-attribute name="body" value="/Pages/AddEmpBankDetails.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition> 
+		<definition name="ExitDetails" extends="base.definition">
+		<put-attribute name="body" value="/Pages/ExitDetails.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition> 
+	
+	<definition name="SearchConsultant" extends="base.definition">
+		<put-attribute name="body" value="/Pages/SearchConsultant.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition> 
+		<definition name="UpdateEmployees" extends="base.definition">
+		<put-attribute name="body" value="/Pages/UpdateEmployees.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition> 
+	
+		<definition name="UpdateExitDetails" extends="base.definition">
+		<put-attribute name="body" value="/Pages/UpdateExitDetails.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition> 
+	<definition name="UpdateEmpBankDetails" extends="base.definition">
+		<put-attribute name="body" value="/Pages/UpdateEmpBankDetails.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition> 
+	<definition name="UpdateConsultants" extends="base.definition">
+		<put-attribute name="body" value="/Pages/UpdateConsultants.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+	<definition name="AddConsultantDocs" extends="base.definition">
+		<put-attribute name="body" value="/Pages/AddConsultantDocs.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+	<definition name="viewConsultantDocs" extends="base.definition">
+		<put-attribute name="body" value="/Pages/viewConsultantDocs.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+		<definition name="ViewEmpHistory" extends="base.definition">
+		<put-attribute name="body" value="/Pages/ViewEmpHistory.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+	<definition name="ConsultantBankDetails" extends="base.definition">
+              <put-attribute name="body" value="/Pages/AddConsultantBankDetails.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="UpdateConsultantBankDetails" extends="base.definition">
+              <put-attribute name="body" value="/Pages/UpdateConsultantBankDetails.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="AddTemplate" extends="base.definition">
+              <put-attribute name="body" value="/Pages/AddTemplate.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="SubmitReport" extends="base.definition">
+              <put-attribute name="body" value="/Pages/SubmitReport.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="SubmitW2Report" extends="base.definition">
+              <put-attribute name="body" value="/Pages/SubmitW2Report.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+         <definition name="ViewStatusReport" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ViewStatusReport.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="ChangePwd" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ChangePwd.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+             <definition name="TimesheetTemplate" extends="base.definition">
+              <put-attribute name="body" value="/Pages/TimesheetTemplate.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+            <definition name="ViewTimesheetTemplate" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ViewTimesheetTemplate.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="SubmitTimesheet" extends="base.definition">
+              <put-attribute name="body" value="/Pages/SubmitTimesheet.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+         <definition name="ViewTimesheet" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ViewTimesheet.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+             <definition name="ViewMyTimesheet" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ViewMyTimesheet.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="ViewAllStatusReport" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ViewAllStatusReport.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="UpdateCustomer" extends="base.definition">
+		<put-attribute name="body" value="/Pages/UpdateCustomer.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+	 <definition name="UpdateVendor" extends="base.definition">
+		<put-attribute name="body" value="/Pages/UpdateVendor.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+	 <definition name="AddClientCustomer" extends="base.definition">
+		<put-attribute name="body" value="/Pages/AddClientCustomer.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+	
+	<definition name="SubmitW2Timesheet" extends="base.definition">
+              <put-attribute name="body" value="/Pages/SubmitW2Timesheet.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       
+       <definition name="myDashboard" extends="base.definition">
+              <put-attribute name="body" value="/Pages/myDashboard.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       
+       <definition name="ExpiredDocuments" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ExpiredDocuments.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       
+      <definition name="Categories" extends="base.definition">
+              <put-attribute name="body" value="/Pages/Categories.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       
+       <definition name="SubCategories" extends="base.definition">
+              <put-attribute name="body" value="/Pages/SubCategories.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="TempRegistration" extends="base.definition">
+              <put-attribute name="body" value="/Pages/TempRegistration.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="ProfileMaster" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ProfileMaster.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="UpdateProfileMaster" extends="base.definition">
+              <put-attribute name="body" value="/Pages/UpdateProfileMaster.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="AssignProfileToCandidate" extends="base.definition">
+              <put-attribute name="body" value="/Pages/AssignProfileToCandidate.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="UpdateAssignedCandidate" extends="base.definition">
+              <put-attribute name="body" value="/Pages/UpdateAssignedCandidate.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       
+       <definition name="contracts" extends="base.definition">
+		<put-attribute name="body" value="/Pages/ContractsPanel.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	</definition>
+	
+	<definition name="PendingBgcList" extends="base.definition">
+		<put-attribute name="body" value="/Pages/PendingBgcList.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+	   </definition>
+       
+       <definition name="ResetPwdTempReg" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ResetPwdTempReg.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       
+         <definition name="ChangePwdTempReg" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ChangePwdTempReg.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       
+       <definition name="PersonalDetails" extends="base.definition">
+              <put-attribute name="body" value="/Pages/PersonalDetails.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="EducationalDetails" extends="base.definition">
+              <put-attribute name="body" value="/Pages/EducationalDetails.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="EmploymentDetails" extends="base.definition">
+              <put-attribute name="body" value="/Pages/EmploymentDetails.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="bgvFormsUser" extends="base.definition">
+              <put-attribute name="body" value="/Pages/bgvFormsUser.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="UpdateBgvCandidatePersonal" extends="base.definition">
+              <put-attribute name="body" value="/Pages/UpdateBgvCandidatePersonal.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="UpdateBgvCandidateEmployment" extends="base.definition">
+              <put-attribute name="body" value="/Pages/UpdateBgvCandidateEmployment.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+         <definition name="UpdateBgvCandidateEducational" extends="base.definition">
+              <put-attribute name="body" value="/Pages/UpdateBgvCandidateEducational.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="ProfileSearch" extends="base.definition">
+		<put-attribute name="body" value="/Pages/ProfileSearch.jsp" />
+		<put-list-attribute name="cssitems"></put-list-attribute>
+		<put-list-attribute name="jsitems"></put-list-attribute>
+		</definition>
+		    <definition name="ProfilesHistory" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ProfilesHistory.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+           <definition name="SearchDocuments" extends="base.definition">
+              <put-attribute name="body" value="/Pages/SearchDocuments.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       
+        <definition name="DocumentsTypeMaster" extends="base.definition">
+              <put-attribute name="body" value="/Pages/DocumentsTypeMaster.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       
+        <definition name="Immigration" extends="base.definition">
+              <put-attribute name="body" value="/Pages/Immigration.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       
+        <definition name="MyImmigrationDocs" extends="base.definition">
+              <put-attribute name="body" value="/Pages/MyImmigrationDocs.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="ClientVendorQuestionnaire" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ClientVendorQuestionnaire.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="PublicBenifitsChecklist" extends="base.definition">
+              <put-attribute name="body" value="/Pages/PublicBenifitsChecklist.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="H1BQuestionnaire" extends="base.definition">
+              <put-attribute name="body" value="/Pages/H1BQuestionnaire.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="ImmiTempRegistration" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ImmiTempRegistration.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       
+       <definition name="ImmiDocumentsTypeMaster" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ImmiDocumentsTypeMaster.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="H1BInitiateTemplate" extends="base.definition">
+              <put-attribute name="body" value="/Pages/H1BInitiateTemplate.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="UpdateImmiTemplateMaster" extends="base.definition">
+              <put-attribute name="body" value="/Pages/UpdateImmiTemplateMaster.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+         <definition name="timesheetDashboard" extends="base.definition">
+              <put-attribute name="body" value="/Pages/timesheetDashboard.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="SOCCodeMaster" extends="base.definition">
+              <put-attribute name="body" value="/Pages/SOCCodeMaster.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="generateInovoice" extends="base.definition">
+              <put-attribute name="body" value="/Pages/generateInovoice.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="invoicegen" extends="base.definition">
+              <put-attribute name="body" value="/Pages/Invoice.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="allinvoices" extends="base.definition">
+              <put-attribute name="body" value="/Pages/AllInvoices.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="allinvoicesbycust" extends="base.definition">
+              <put-attribute name="body" value="/Pages/AllInvoicesbyCustomer.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="expensegen" extends="base.definition">
+              <put-attribute name="body" value="/Pages/Expense.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+           <definition name="addemp" extends="base.definition">
+              <put-attribute name="body" value="/Pages/AddEmployee.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+           <definition name="addcust" extends="base.definition">
+              <put-attribute name="body" value="/Pages/QBCustomers.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+         <definition name="products" extends="base.definition">
+              <put-attribute name="body" value="/Pages/ProductsnServices.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+        <definition name="reports" extends="base.definition">
+              <put-attribute name="body" value="/Pages/GenerateReport.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="createInvoice" extends="base.definition">
+              <put-attribute name="body" value="/Pages/createInvoice.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       <definition name="AllQbCustomers" extends="base.definition">
+              <put-attribute name="body" value="/Pages/AllQbCustomers.jsp" />
+              <put-list-attribute name="cssitems"></put-list-attribute>
+              <put-list-attribute name="jsitems"></put-list-attribute>
+       </definition>
+       
+</tiles-definitions>
